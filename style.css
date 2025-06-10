@@ -318,9 +318,11 @@ main h2 {
     gap: 10%;
     align-items: center;
     width: 90%;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     margin-top: 200px;
     margin-bottom: 700px;
+    position: relative;
 }
 
 .my-project h3{
@@ -476,11 +478,11 @@ main h2 {
 }
 
 /* CONTACT GRID */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: start;
+
+.contact-info-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .info-card {
@@ -506,7 +508,16 @@ main h2 {
 }
 
 .contact-item {
-    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.contact-item i {
+    font-size: 1.8rem;
+    color: #aeb076;
 }
 
 .contact-item p {
@@ -695,6 +706,72 @@ footer {
   :root {
     font-size: 14px;
   }
+}
+
+@media screen and (max-width: 1024px) {
+    .my-project {
+        height: auto;
+        gap: 5rem;
+        margin-bottom: 10rem;
+    }
+
+    .project-card {
+        flex-direction: column;
+        height: auto;
+        gap: 2rem;
+    }
+
+    .project-vidbox,
+    .project-info {
+        width: 100%;
+        padding: 0;
+        min-width: auto;
+        text-align: center;
+    }
+
+    .project-info {
+        align-items: center;
+    }
+
+    .project-info h1 {
+        text-wrap: wrap;
+        font-size: 22px;
+    }
+
+    .project-info p {
+        min-width: auto;
+        margin: 1rem 0;
+    }
+
+    .hover-sign::before,
+    .hover-sign::after {
+        font-size: 30px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .my-project h3 {
+        font-size: 3rem;
+    }
+
+    .project-info button {
+        padding: 10px 25px;
+    }
+
+    .project-vidbox img {
+        width: 90%;
+    }
+
+    .project-info p {
+        font-size: 14px;
+    }
+
+    .project-info h1 {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 768px) {
