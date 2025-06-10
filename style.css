@@ -353,7 +353,7 @@ main h2 {
 
 }
 
-.project-vidbox video{
+.project-vidbox img{
     object-fit: cover;
     width: 100%;
     box-shadow: 0 0 10px lightgray;
@@ -361,7 +361,7 @@ main h2 {
     transition: 0.5s;
 }
 
-.project-card video:hover{
+.project-card img:hover{
     box-shadow: 0 0 25px rgb(255, 255, 255);
 }
 
@@ -704,7 +704,7 @@ footer {
 }
 
 @media screen and (max-width: 700px){
-     .project-vidbox video{
+     .project-vidbox img{
         width: 250px;
         margin-left: -100px;
     }
