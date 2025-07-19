@@ -7,6 +7,23 @@ document.querySelectorAll('.card').forEach(card => {
     });
 });
 
+    const video1 = document.getElementById('projectVideo1');
+    const video2 = document.getElementById('projectVideo2');
+    const video3 = document.getElementById('projectVideo3');
+    const video4 = document.getElementById('projectVideo4');
+
+    const videoList =[video1, video2, video3, video4];
+
+    videoList.forEach (function(video){
+        video.addEventListener("mouseover", function(){
+            video.play()
+        })
+        video.addEventListener("mouseout", function(){
+        video.pause();
+    })
+    })
+
+
 // Smooth scroll to contact section
 document.querySelector('.contact-btn').addEventListener('click', function(e) {
     e.preventDefault();
@@ -80,15 +97,15 @@ AOS.init({
     once: true
 });
 
-// Handle video hover effects if videos are present
-const videos = document.querySelectorAll('video');
-if (videos.length > 0) {
-    videos.forEach(video => {
-        video.addEventListener("mouseover", function() {
-            this.play();
-        });
-        video.addEventListener("mouseout", function() {
-            this.pause();
-        });
-    });
-}
+// // Handle video hover effects if videos are present
+// const videos = document.querySelectorAll('video');
+// if (videos.length > 0) {
+//     videos.forEach(video => {
+//         video.addEventListener("mouseover", function() {
+//             this.play();
+//         });
+//         video.addEventListener("mouseout", function() {
+//             this.pause();
+//         });
+//     });
+// }
