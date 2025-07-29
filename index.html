@@ -1,289 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>YOON PYAE EAIN - V2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YOON PYAE EAIN - Portfolio V2</title>
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="favicon.png">
+        
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="style.css">
-        <!-- Icons -->
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <!-- AOS Animation -->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css">
     </head>
+    <body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="spinner"></div>
+        </div>
 
-    <body class="position-relative">
         <!-- Header -->
-        <header class="container-fluid py-3" data-aos="fade-down">
-            <div class="row align-items-center">
-                <div class="col-6">
-                    <div class="logo">YOON PYAE EAIN</div>
+        <header class="sticky-top">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="#">YOON PYAE EAIN</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                            <li class="nav-item"><a class="nav-link btn-contact" href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-6 text-end">
-                    <button class="contact-btn">Contact</button>
-                </div>
-            </div>
+            </nav>
         </header>
 
-        <!-- Main Section -->
-        <main class="container-fluid py-5 position-relative">
-            <!-- 3D Spline Viewer - positioned behind text -->
-            <spline-viewer class="planet-3D" url="https://prod.spline.design/GdebxFWMCFqLCbyK/scene.splinecode">
-            </spline-viewer>
-
-            <div class="row">
-                <div class="col-12 title-section" data-aos="fade-down">
-                    <h1>WEB DEVELOPER</h1>
-                    <div class="location mt-4">
-                        <p>BASED<br>In<br>MYANMAR</p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <h1 class="hero-title">WEB DEVELOPER</h1>
+                        <div class="location">
+                            <p>BASED IN MYANMAR</p>
+                        </div>
+                        <p class="hero-bio">
+                            Currently working as <span>A Junior ASP.NET Developer</span>, building
+                            full-stack web apps — juggling both backend logic and frontend interfaces with
+                            <span class="highlight">Angular</span>.
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary me-2">View Projects</a>
+                            <a href="#contact" class="btn btn-outline">Contact Me</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="hero-model">
+                            <spline-viewer url="https://prod.spline.design/GdebxFWMCFqLCbyK/scene.splinecode"></spline-viewer>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="row mt-5">
-                <div class="col-12 col-md-6 col-lg-4 bio-section" data-aos="fade-up">
-                    <p class="bio">
-                        Currently working as <span>A Junior ASP.NET Developer</span>, building
-                        full-stack web apps — juggling both backend logic and frontend interfaces with
-                        <span style="color: #268470;">Angular</span>.
-                    </p>
-                </div>
+            <div class="scroll-down">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
             </div>
-        </main>
+        </section>
 
         <!-- About Section -->
-        <section class="about-section container-fluid py-5">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <h1 class="about-title" data-aos="fade-down">About Me</h1>
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-down">
+                    <h2>About Me</h2>
+                    <p>Get to know more about my background and skills</p>
                 </div>
-            </div>
-
-            <div class="row mt-5 g-4">
-                <!-- Intro Card -->
-                <div class="col-12 col-lg-6" data-aos="fade-right">
-                    <div class="card intro h-100">
-                        <h2 class="card-title">EDUCATION</h2>
-                        <div class="col-12 text-center">
-                            <div class="row">
-                                <div class="col">
-                                    <img src="images/ncc logo.png"
-                                        class="img-thumbnail rounded mx-auto d-block w-50 p-3" alt="NCC logo">
+                
+                <div class="row g-4">
+                    <!-- Education Card -->
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>EDUCATION</h3>
+                            <div class="education-item text-center">
+                                <div class="edu-logo">
+                                    <img src="images/kmd logo.png" alt="KMD College">
+                                    <img src="images/ncc logo.png" alt="NCC Education">
                                 </div>
-                                <div class="col">
-                                    <img src="images/kmd logo.png"
-                                        class="img-thumbnail rounded mx-auto d-block w-50 p-3" alt="KMD logo">
+                                <div class="edu-details">
+                                    <small>2022 - 2025</small>
+                                    <h4>KMD COLLEGE</h4>
+                                    <p>NCC Education Level 3 (L3DC), Level 4 (L4DC) and Level 5 (L5DC) Diploma in Computing</p>
                                 </div>
                             </div>
-                            <p class="card-text ">
-                                <small>2022 - 2025</small> <br>
-                                <strong>KMD COLLEGE</strong> <br>
-                                NCC Education Level 3 (L3DC), Level 4 (L4DC) and Level 5 (L5DC) Diploma in Computing
-                            </p>
-                        </div>
-                        <div class="col-12 text-center mt-2">
-                            <div class="col">
-                                <img src="images/university-of-greenwich logo.jpg"
-                                    class="img-thumbnail rounded mx-auto d-block w-25 p-3" alt="UOG logo">
+                            <div class="education-item text-center">
+                                <div class="edu-logo">
+                                    <img src="images/university-of-greenwich logo.jpg" alt="University of Greenwich">
+                                </div>
+                                <div class="edu-details">
+                                    <small>2025 - present</small>
+                                    <h4>University of Greenwich</h4>
+                                    <p>B.Sc (Hons) in Computing</p>
+                                </div>
                             </div>
-                            <p class="card-text ">
-                                <small>2025 - present</small> <br>
-                                <strong>University of Greenwich</strong> <br>
-                                B.Sc (Hons) in Computing
-                            </p>
                         </div>
-                        <img src="images/gradient1.png" alt="" class="background-img">
                     </div>
-                </div>
-
-                <!-- Tech Card -->
-                <div class="col-12 col-lg-6" data-aos="fade-left">
-                    <div class="card tech h-100">
-                        <h2 class="card-title">WHAT I USE</h2>
-                        <p class="card-text">
-                            I seamlessly bridge frontend and backend, crafting complete web applications with tools such
-                            as:
-                            <br><br>
-                            <strong>Frontend:</strong> Angular, Tailwind CSS, PrimeNG, HTML5, JavaScript, TypeScript
-                            <br>
-                            <strong>Backend:</strong> C#, ASP.NET Core Web API, PHP
-                            <br>
-                            <strong>Database:</strong> SQL Server, MySQL
-                            <br>
-                            <strong>Other Tools:</strong> Git, Figma, Spline
-                        </p>
-                        <img src="images/gradient 2.png" alt="" class="background-img">
-                        <img src="images/skills group.png" alt="" class="skills-group">
+                    
+                    <!-- Skills Card -->
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>WHAT I USE</h3>
+                            <p>I seamlessly bridge frontend and backend, crafting complete web applications with these tools:</p>
+                            <div class="skills-container">
+                                <div class="skill-category">
+                                    <h4>Frontend</h4>
+                                    <ul>
+                                        <li>Angular</li>
+                                        <li>Tailwind CSS</li>
+                                        <li>PrimeNG</li>
+                                        <li>HTML5</li>
+                                        <li>JavaScript</li>
+                                        <li>TypeScript</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-category">
+                                    <h4>Backend</h4>
+                                    <ul>
+                                        <li>C#</li>
+                                        <li>ASP.NET Core</li>
+                                        <li>PHP</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-category">
+                                    <h4>Database</h4>
+                                    <ul>
+                                        <li>SQL Server</li>
+                                        <li>MySQL</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Time Card -->
-                <div class="col-12 col-md-6" data-aos="fade-up">
-                    <div class="card time h-100">
-                        <h2 class="card-title">WORK EXPERIENCE</h2>
-                        <p class="card-text">
-                            <small>2025 Feb - 2025 July </small> <br>
-                            Junior Asp .Net Web Developer at Efficient Soft
-                        </p>
-                        <img src="images/gradient3&4.png" alt="" class="background-img">
+                    
+                    <!-- Experience Card -->
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3>WORK EXPERIENCE</h3>
+                            <div class="experience-item">
+                                <small>2025 Feb - 2025 July</small>
+                                <h4>Junior ASP.NET Developer</h4>
+                                <p class="company">Efficient Soft</p>
+                                <ul>
+                                    <li>Developed full-stack web applications using ASP.NET Core and Angular</li>
+                                    <li>Implemented RESTful APIs for client-server communication</li>
+                                    <li>Collaborated with team members using Git version control</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Passion Card -->
-                <div class="col-12 col-md-6" data-aos="fade-up">
-                    <div class="card passion h-100">
-                        <h2 class="card-title">WHY I CODE</h2>
-                        <p class="card-text">
-                            Coding isn't just a skill — it's how I think, solve problems, and express creativity. Every
-                            project is a chance to grow and create something meaningful.
-                        </p>
-                        <img src="images/gradient3&4.png" alt="" class="background-img">
+                    
+                    <!-- Passion Card -->
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="about-card">
+                            <div class="card-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>WHY I CODE</h3>
+                            <p>Coding isn't just a skill — it's how I think, solve problems, and express creativity. Every project is a chance to grow and create something meaningful.</p>
+                            <div class="passion-quote">
+                                <blockquote>
+                                    "The web is my canvas, and code is my paintbrush."
+                                </blockquote>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section class="my-project container-fluid py-5">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h3 class="section-title" data-aos="fade-down">My Projects</h3>
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-down">
+                    <h2>My Projects</h2>
+                    <p>Some of my recent work and personal projects</p>
                 </div>
-            </div>
-
-            <!-- Project 1 -->
-            <div class="row align-items-center my-5" data-aos="fade-right">
-                <div class="col-12 col-lg-6 order-lg-1 order-2">
-                    <div class="project-info">
-                        <h1>Text to <span class="gradient">Voice</span> Converter</h1>
-                        <p>A web application that converts text to speech with voice selection. Supports different
-                            voices
-                            including Microsoft David for English (United States).</p>
-                        <button class="btn btn-primary"><i class='bx bx-link-external'></i> Website</button>
+                
+                <!-- Project 1 -->
+                <div class="project-item" data-aos="fade-up">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 order-lg-1 order-2">
+                            <div class="project-info">
+                                <h3>Text to <span>Voice</span> Converter</h3>
+                                <p>A web application that converts text to speech with voice selection. Supports different voices including Microsoft David for English (United States).</p>
+                                <div class="tech-used">
+                                    <span>Angular</span>
+                                    <span>TypeScript</span>
+                                    <span>Web Speech API</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                    <a href="#" class="btn btn-outline"><i class="fab fa-github"></i> View Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-lg-2 order-1">
+                            <div class="project-image">
+                                <img src="images/project-1.png" alt="Text to Voice Converter" class="img-fluid">
+                                <div class="image-overlay">
+                                    <a href="#" class="view-btn">View Project</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
-                    <div class="project-vidbox">
-                        <img id="projectImage1" src="images/project-1.png" alt="Weather App Project"
-                            class="img-fluid rounded">
-                        <div class="hover-sign"></div>
+                
+                <!-- Project 2 -->
+                <div class="project-item" data-aos="fade-up">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="project-info">
+                                <h3>Snack Brand <span>Website</span></h3>
+                                <p>A modern snack brand website with product showcase, navigation, and call-to-action sections. Features clean design with crab flavor product focus.</p>
+                                <div class="tech-used">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                    <a href="#" class="btn btn-outline"><i class="fab fa-github"></i> View Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="project-image">
+                                <img src="images/project-2.png" alt="Snack Brand Website" class="img-fluid">
+                                <div class="image-overlay">
+                                    <a href="#" class="view-btn">View Project</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="row align-items-center my-5" data-aos="fade-left">
-                <div class="col-12 col-lg-6">
-                    <div class="project-info">
-                        <h1>Snack Brand <span class="gradient">Website</span></h1>
-                        <p>A modern snack brand website with product showcase, navigation, and call-to-action sections.
-                            Features clean design with crab flavor product focus.</p>
-                        <button class="btn btn-primary"><i class='bx bx-link-external'></i> Website</button>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                    <div class="project-vidbox">
-                        <img id="projectImage2" src="images/project-2.png" alt="Snack Brand Website"
-                            class="img-fluid rounded">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="row align-items-center my-5" data-aos="fade-right">
-                <div class="col-12 col-lg-6 order-lg-1 order-2">
-                    <div class="project-info">
-                        <h1>Weather <span class="gradient">Forecast</span> App</h1>
-                        <p>A weather application showing current conditions and forecasts. Features include city search,
-                            temperature display, humidity, wind speed, and multi-day forecasts.</p>
-                        <button class="btn btn-primary"><i class='bx bx-link-external'></i> Website</button>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
-                    <div class="project-vidbox">
-                        <img id="projectImage3" src="images/project-3.png" alt="Text to Voice Converter"
-                            class="img-fluid rounded">
+                
+                <!-- Project 3 -->
+                <div class="project-item" data-aos="fade-up">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 order-lg-1 order-2">
+                            <div class="project-info">
+                                <h3>Weather <span>Forecast</span> App</h3>
+                                <p>A weather application showing current conditions and forecasts. Features include city search, temperature display, humidity, wind speed, and multi-day forecasts.</p>
+                                <div class="tech-used">
+                                    <span>Angular</span>
+                                    <span>OpenWeather API</span>
+                                    <span>RxJS</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                    <a href="#" class="btn btn-outline"><i class="fab fa-github"></i> View Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-lg-2 order-1">
+                            <div class="project-image">
+                                <img src="images/project-3.png" alt="Weather Forecast App" class="img-fluid">
+                                <div class="image-overlay">
+                                    <a href="#" class="view-btn">View Project</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="projects-section">
-            <h3 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Certificates</h3>
-
-            <div class="slider" style="
-            --width: 60rem;
-            --height: 40rem;
-            --quantity: 4;
-        ">
-
-                <div class="list">
-                    <div class="item" style="--position: 1"><img id="projectVideo1" loop playsinline
-                            src="video/ITC Certificate.png"></img></div>
-
-                    <div class="item" style="--position: 2"><img id="projectVideo2" loop playsinline
-                            src="video/Web Developmemt Certificate.png"></img></div>
-
-                    <div class="item" style="--position: 3"><img id="projectVideo3" loop playsinline
-                            src="video/Responsive Web Developmet Certificate.png"></img></div>
-
-                    <div class="item" style="--position: 4"><img id="projectVideo4" loop playsinline
-                            src="video/Responsive Web Developmet Certificate.png"></img></div>
+        <!-- Certificates Section -->
+        <section id="certificates" class="certificates-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-down">
+                    <h2>Certificates</h2>
+                    <p>My professional certifications and achievements</p>
                 </div>
-
+                
+                <div class="certificates-slider" data-aos="fade-up">
+                    <div class="certificate-item">
+                        <img src="video/ITC Certificate.png" alt="ITC Certificate" class="img-fluid">
+                        <div class="certificate-info">
+                            <h4>Introduction to Computing</h4>
+                            <p>NCC Education</p>
+                            <small>Issued: 2022</small>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <img src="video/Web Developmemt Certificate.png" alt="Web Development Certificate" class="img-fluid">
+                        <div class="certificate-info">
+                            <h4>Web Development Fundamentals</h4>
+                            <p>NCC Education</p>
+                            <small>Issued: 2023</small>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <img src="video/Responsive Web Developmet Certificate.png" alt="Responsive Web Development Certificate" class="img-fluid">
+                        <div class="certificate-info">
+                            <h4>Responsive Web Development</h4>
+                            <p>NCC Education</p>
+                            <small>Issued: 2024</small>
+                        </div>
+                    </div>
+                    <div class="certificate-item">
+                        <img src="video/React Developmemt Certificate.png" alt="ASP.NET Certificate" class="img-fluid">
+                        <div class="certificate-info">
+                            <h4>ASP.NET Core Development</h4>
+                            <p>Microsoft</p>
+                            <small>Issued: 2025</small>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section class="contact-section container-fluid py-5" id="contact-section">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <div class="section-header" data-aos="fade-down">
-                        <h3>Get In Touch</h3>
-                        <p>Have a project in mind or just want to say hello? Reach out through these channels</p>
-                    </div>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-down">
+                    <h2>Get In Touch</h2>
+                    <p>Have a project in mind or just want to say hello? Reach out through these channels</p>
                 </div>
-            </div>
-
-            <div class="row justify-content-center mt-5">
-                <div class="col-12 col-md-8 col-lg-6" data-aos="fade-zoom-in">
-                    <div class="info-card">
-                        <h3>Contact info</h3>
-
-                        <div class="contact-item">
-                            <i class='bx bx-envelope'></i>
-                            <div>
-                                <p>Email</p>
-                                <a href="mailto:yoonpyae26@gmail.com" target="_blank">yoonpyae26@gmail.com</a>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <i class='bx bxl-facebook'></i>
-                            <div>
-                                <p>Facebook</p>
-                                <a href="https://www.facebook.com/share/19Qds9tzLf/" target="_blank">Yoon Pyae Eain</a>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <i class='bx bx-map'></i>
-                            <div>
-                                <p>Location</p>
-                                <span>Yangon, Myanmar</span>
-                            </div>
-                        </div>
-
-                        <div class="social-link mt-4">
-                            <p>Connect with me</p>
-                            <div class="d-flex gap-3">
-                                <a href="https://github.com/yoonpyae" target="_blank"
-                                    class="btn btn-outline-light">GitHub</a>
-                                <a href="https://www.linkedin.com/in/yoonpyae" target="_blank"
-                                    class="btn btn-outline-light">LinkedIn</a>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8" data-aos="fade-up">
+                        <div class="contact-card">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="contact-info">
+                                        <h3>Contact Info</h3>
+                                        
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                            <div>
+                                                <p>Email</p>
+                                                <a href="mailto:yoonpyae26@gmail.com">yoonpyae26@gmail.com</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="contact-item">
+                                            <div class="contact-icon">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                            </div>
+                                            <div>
+                                                <p>Location</p>
+                                                <span>Yangon, Myanmar</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="contact-social">
+                                            <p>Connect with me</p>
+                                            <div class="social-links">
+                                                <a href="https://www.facebook.com/share/19Qds9tzLf/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                                <a href="https://github.com/yoonpyae" target="_blank"><i class="fab fa-github"></i></a>
+                                                <a href="https://www.linkedin.com/in/yoonpyae" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <form id="contactForm" class="contact-form">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Your Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Your Email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Subject">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -292,37 +407,34 @@
         </section>
 
         <!-- Footer -->
-        <footer class="footer-minimal">
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <span>YP</span>
-                </div>
-                <div class="footer-copyright">
-                    © <span id="currentYear"></span> YOON PYAE EAIN
-                </div>
-                <div class="footer-social">
-                    <a href="https://github.com/yoonpyae" target="_blank" aria-label="GitHub">
-                        <i class='bx bxl-github'></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/yoonpyae" target="_blank" aria-label="LinkedIn">
-                        <i class='bx bxl-linkedin-square'></i>
-                    </a>
-                    <a href="mailto:yoonpyae26@gmail.com" aria-label="Email">
-                        <i class='bx bx-envelope'></i>
-                    </a>
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <span>YP</span>
+                        <span>YOON PYAE EAIN</span>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#certificates">Certificates</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-copyright">
+                        &copy; <span id="currentYear"></span> All Rights Reserved
+                    </div>
                 </div>
             </div>
         </footer>
 
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
         <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init();
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-        </script>
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
         <script src="app.js"></script>
     </body>
-
 </html>
