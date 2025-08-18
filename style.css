@@ -828,11 +828,24 @@ footer {
         font-size: 3.5rem;
     }
     
+     .hero::before {
+        top: -30%;
+        right: -50%;
+        width: 200%;
+        height: 160%;
+    }
+    
     .hero-model {
         height: 350px;
         margin-top: 3rem;
+        margin-left: auto;
+        margin-right: auto;
     }
-    
+
+    spline-viewer {
+        max-width: 400px;
+    }
+
     .section-header h2 {
         font-size: 2.5rem;
     }
@@ -843,7 +856,18 @@ footer {
         padding: 6rem 0 3rem;
         text-align: center;
     }
+
+    .hero::before {
+        top: -20%;
+        right: -70%;
+        width: 250%;
+        height: 140%;
+    }
     
+    .hero-model {
+        height: 300px;
+    }
+
     .hero-title {
         font-size: 3rem;
     }
@@ -886,6 +910,22 @@ footer {
 }
 
 @media (max-width: 575.98px) {
+    .hero::before {
+        top: -10%;
+        right: -100%;
+        width: 300%;
+        height: 120%;
+    }
+
+    .hero-model{
+        margin-top: 0rem;
+        margin-bottom: 3rem;
+    }
+    
+    spline-viewer {
+     max-width: 75%;
+    }
+    
     .hero-title {
         font-size: 2.5rem;
     }
