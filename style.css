@@ -650,7 +650,6 @@ spline-viewer {
 .contact-info {
     padding: 2rem;
     height: 100%;
-    background: linear-gradient(135deg, rgba(55, 225, 188, 0.1), rgba(79, 70, 229, 0.1));
 }
 
 .contact-info h3 {
@@ -726,39 +725,6 @@ spline-viewer {
     transform: translateY(-3px);
 }
 
-.contact-form {
-    padding: 2rem;
-    height: 100%;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-control {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--card-border);
-    color: var(--light-text);
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.form-control:focus {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: var(--primary-color);
-    color: var(--light-text);
-    box-shadow: 0 0 0 0.25rem rgba(55, 225, 188, 0.25);
-}
-
-.form-control::placeholder {
-    color: var(--gray-text);
-}
-
-textarea.form-control {
-    min-height: 150px;
-    resize: vertical;
-}
 
 /* Footer */
 footer {
@@ -783,7 +749,6 @@ footer {
 .footer-logo span:first-child {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-radius: 50%;
     display: flex;
     align-items: center;
